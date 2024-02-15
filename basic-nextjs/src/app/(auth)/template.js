@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
 import "../index.css"
 // export const metadata = {
 //   title: 'Next.js',
@@ -8,6 +9,8 @@ import "../index.css"
 // }
 
 export default function RootLayout({ children }) {
+
+  const [input, setInput] = useState("");
 
     const navLink = [
         {name: 'Register', href: '/register'},
@@ -20,6 +23,17 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en">
       <body>
+
+        <input
+          type="text"
+          id="id"
+          name="name"
+          value={input}
+          onChange={(e)=>setInput(e.target.value)}
+          placeholder="placeholder"
+          className="w-[300px] border text-black border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
+        />
+
         {
             navLink.map((link) => {
                 const isActive = pathName.startsWith(link.href);
