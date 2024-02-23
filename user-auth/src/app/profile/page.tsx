@@ -36,16 +36,16 @@ export default function Profile(){
     // },[])
 
     return (
-        <div>
-            <h1>Profile Page</h1>
+        <div className="text-center mt-10">
+            <h1 className="m-5">Profile Page</h1>
             <hr />
                 
-                <Link href={`/profile/${data}`}>{data}</Link>
+                <Link className="p-3 m-4 bg-blue-600" href={`/profile/${data}`}>{data}</Link>
             <hr />
 
-            <button onClick={()=>handleLogout()}>Logout</button>
+            <button className="bg-red-400 rounded m-2 p-2 px-4" onClick={()=>handleLogout()}>Logout</button>
             <hr />
-            <button onClick={()=>getUserDetails()}>get Details</button>
+            <button  className="bg-green-400 rounded m-2 p-2 px-4" onClick={()=>getUserDetails()}>get Details</button>
 
         </div>
     )

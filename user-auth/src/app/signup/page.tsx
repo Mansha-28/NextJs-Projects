@@ -44,10 +44,10 @@ export default function SignUp(){
 
     return (
         <div className="text-center">
-            <h1 className='text-2xl m-5'>{loading? "processing":"SignUp"}</h1>
+            <h1 className='text-3xl m-5 font-bold'>{loading? "processing":"SignUp"}</h1>
 
             <div>
-                <label htmlFor="">username</label>
+                <label className='w-[150px] inline-block' htmlFor="username">username</label>
                 <input
                     className="p-2 m-3 rounded text-black"
                     type="text"
@@ -59,7 +59,7 @@ export default function SignUp(){
             </div>
 
             <div>
-                <label htmlFor="">email</label>
+                <label className='w-[150px] inline-block' htmlFor="email">email</label>
                 <input
                     className="p-2 m-3 rounded text-black"
                     type="email"
@@ -71,7 +71,7 @@ export default function SignUp(){
             </div>
 
             <div>
-                <label htmlFor="">password</label>
+                <label className='w-[150px] inline-block' htmlFor="password">password</label>
                 <input
                     className="p-2 m-3 rounded text-black"
                     type="password"
@@ -89,8 +89,8 @@ export default function SignUp(){
                     SignUp
             </button>
             
-            <div>
-                <Link href="/login">Already a user? login</Link>
+            <div className='mt-4'>
+                <Link  className='text-blue-400' href="/login">Already a user? login</Link>
             </div>
 
         </div>

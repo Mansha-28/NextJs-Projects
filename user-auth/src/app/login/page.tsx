@@ -39,10 +39,10 @@ export default function Login(){
 
     return (
         <div className="text-center">
-            <h1 className='text-2xl m-5'>{loading ? "Processing" : "Login"}</h1>
+            <h1 className='text-3xl m-5 font-bold'>{loading ? "Processing" : "Login"}</h1>
 
-            <div>
-                <label htmlFor="">email</label>
+            <div className=''>
+                <label className='w-[150px] inline-block' htmlFor="email">email</label>
                 <input
                     className="p-2 m-3 rounded text-black"
                     type="email"
@@ -54,9 +54,9 @@ export default function Login(){
             </div>
 
             <div>
-                <label htmlFor="" className=''>password</label>
+                <label htmlFor="password" className='w-[150px] inline-block'>password</label>
                 <input
-                    className="p-2 m-3 rounded text-black"
+                    className="p-2 m-3  rounded text-black"
                     type="password"
                     name='password'
                     value={user.password}
@@ -72,8 +72,8 @@ export default function Login(){
                     Login
             </button>
             
-            <div>
-                <Link href="/signup">Not a registered user? SignUp</Link>
+            <div className='mt-4'>
+                <Link className='text-blue-400' href="/signup">Not a registered user? SignUp</Link>
             </div>
 
         </div>
